@@ -22,6 +22,7 @@ LatLng calculateCenter(List<LatLng> points) {
 CameraPosition cameraPosition({
   required List<LatLng> points,
   double padding = 0,
+  double correctness = 1,
 }) {
   final bounds = farthestBounds(points);
   return CameraPosition(
@@ -29,6 +30,7 @@ CameraPosition cameraPosition({
     zoom: distanceToZoom(
           distanceBetween(bounds.northeast, bounds.southwest),
         ) +
+        correctness +
         padding,
   );
 }
