@@ -25,6 +25,9 @@ extension PolygonExtension on Polygon {
 
   LatLng get getCenter => calculateCenter(points);
 
+  bool contains(LatLng point) => checkIfValidMarker(point);
+
+  @Deprecated("Use 'contains' instead")
   bool checkIfValidMarker(LatLng point) {
     int intersectCount = 0;
 
