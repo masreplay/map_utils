@@ -4,10 +4,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:map_utils/map_utils.dart';
 
 extension on Random {
-  int uniform(int start, int end) {
-    return start + nextInt(end - start);
-  }
-
   double uniformDouble(double start, double end) {
     return nextDouble() * (end - start) + start;
   }

@@ -36,7 +36,6 @@ CameraPosition cameraPosition({
 }
 
 LatLngBounds farthestBounds(List<LatLng> points) {
-  assert(points.length > 2);
   double? x0, y0, x1, y1;
   for (LatLng latLng in points) {
     if (x0 == null) {
